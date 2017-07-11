@@ -449,31 +449,22 @@ public class IeltsCalculator extends AppCompatActivity {
         Double readingScore = calculateReadingScore(correctReadingScore);
         Double writingScore = Double.parseDouble(string_writing);
         Double speakingScore = Double.parseDouble(string_speaking);
-        if(!string_listening.equals("")) {
-            if(!string_reading.equals("")) {
-               if (!string_writing.equals("")){
-               if (!string_speaking.equals("")) {
+        if((!string_listening.equals("")) &&
+            (!string_reading.equals(""))  &&
+                (!string_writing.equals("Select"))&&
+                (!string_speaking.equals("Select"))){
 
-            Double bandScore = (listeningScore+ readingScore + writingScore + speakingScore)/4;
-            Toast.makeText(getApplicationContext(), "Your BandScore is : " + bandScore, Toast.LENGTH_SHORT).show();
-        }else {
-                   Toast.makeText(getApplicationContext(), "Please assign your missing score to see the TOTAL BANDSCORE",
-                           Toast.LENGTH_SHORT).show();
-        }
-    }else {
-                   Toast.makeText(getApplicationContext(), "Please assign your missing score to see the TOTAL BANDSCORE",
-                           Toast.LENGTH_SHORT).show();
-    }
-            }else {
-                Toast.makeText(getApplicationContext(), "Please assign your missing score to see the TOTAL BANDSCORE",
-                        Toast.LENGTH_SHORT).show();}
+        Double bandScore = (listeningScore + readingScore + writingScore + speakingScore) / 4;
+        Toast.makeText(getApplicationContext(), "Your BandScore is : " + bandScore, Toast.LENGTH_SHORT).show();
     }
         else {
-            Toast.makeText(getApplicationContext(), "Please assign your missing score to see the TOTAL BANDSCORE",
-                    Toast.LENGTH_SHORT).show();
+                   Toast.makeText(getApplicationContext(), "Please assign your missing score to see the TOTAL BANDSCORE",
+                           Toast.LENGTH_SHORT).show();
+        }
+
         }
     }
 
-    }
+
 
 

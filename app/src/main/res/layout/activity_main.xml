@@ -56,6 +56,6 @@
         android:layout_weight="1"
         android:text="Click for tips"
         android:background="#aac"
-        android:onClick="findTips "
+        android:onClick="findTips"
          />
 </LinearLayout>
